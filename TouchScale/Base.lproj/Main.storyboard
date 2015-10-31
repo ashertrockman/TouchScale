@@ -48,11 +48,27 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bah-Et-Zi1">
+                                <rect key="frame" x="277" y="471" width="30" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12Y-pC-1rL">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Tare"/>
+                                        <connections>
+                                            <action selector="onTare:" destination="BYZ-38-t0r" eventType="touchDown" id="vpc-kK-hXB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bah-Et-Zi1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="250" id="KJ5-Pn-OQS"/>
                             <constraint firstItem="U3N-dz-ePR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OiQ-8C-F98"/>
+                            <constraint firstItem="Bah-Et-Zi1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fKc-Z4-AkV"/>
                             <constraint firstItem="U3N-dz-ePR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gGN-X6-SbE"/>
                         </constraints>
                     </view>
