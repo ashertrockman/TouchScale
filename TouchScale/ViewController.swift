@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
-        weight.text = "0.0g"
+        view.multipleTouchEnabled = true
+        weight.text = "0.00g"
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -36,11 +36,13 @@ class ViewController: UIViewController {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        weight.text = "-\(tareForce.grams(0))g"
+        currentForce = 0
+        weight.text = "\(tareForce > 0 ? "-" : "")\(tareForce.grams(0))g"
     }
     
     @IBAction func onTare(sender: AnyObject) {
         tareForce = currentForce
+        weight.text = "0.00g"
     }
     
     override func didReceiveMemoryWarning() {
